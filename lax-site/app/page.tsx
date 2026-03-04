@@ -122,7 +122,7 @@ export default function UploadPage() {
 
   const checkBackendStatus = async () => {
     try {
-      const response = await fetch('https://laxshot-api.onrender.com', {
+      const response = await fetch('https://laxshot-ai.onrender.com/', {
         method: 'GET',
         headers: { 'Accept': 'application/json' },
         mode: 'cors',
@@ -225,7 +225,7 @@ export default function UploadPage() {
       
       // First, test the connection
       try {
-        const testResponse = await fetch('http://localhost:8000/api/test', {
+        const testResponse = await fetch('https://laxshot-ai.onrender.com/', {
           method: 'GET',
           headers: { 'Accept': 'application/json' },
         });
@@ -241,7 +241,7 @@ export default function UploadPage() {
 
       console.log('Sending video to backend...');
       
-      const response = await fetch('http://localhost:8000/api/analyze-video', {
+      const response = await fetch('https://laxshot-ai.onrender.com/api/analyze-video', {
         method: 'POST',
         body: formData,
         signal: controller.signal,
