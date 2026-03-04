@@ -1,0 +1,20 @@
+
+{
+  "git": {
+    "deploymentEnabled": {
+      "lax-site": true
+    }
+  },
+  "builds": [
+    {
+      "src": "lax-site/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/lax-site/$1"
+    }
+  ]
+}
