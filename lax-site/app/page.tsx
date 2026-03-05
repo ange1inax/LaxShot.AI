@@ -237,7 +237,7 @@ export default function UploadPage() {
 
       // Upload to backend with timeout
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 30000);
+      const timeoutId = setTimeout(() => controller.abort(), 120000);
 
       console.log('Sending video to backend...');
       
