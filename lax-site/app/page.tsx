@@ -122,7 +122,7 @@ export default function UploadPage() {
 
   const checkBackendStatus = async () => {
     try {
-      const response = await fetch('https://laxshot-ai.onrender.com/', {
+      const response = await fetch('https://laxshot-ai.onrender.com/api/test', {
         method: 'GET',
         headers: { 'Accept': 'application/json' },
         mode: 'cors',
