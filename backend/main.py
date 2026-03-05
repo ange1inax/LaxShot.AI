@@ -1469,7 +1469,7 @@ async def analyze_video(video: UploadFile = File(...)):
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     
     # Setup video writer
-    fourcc = cv2.VideoWriter_fourcc(*'avc1')
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(temp_output_path, fourcc, fps, (width, height))
 
     # Tracking variables
